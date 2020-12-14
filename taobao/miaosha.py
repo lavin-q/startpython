@@ -73,17 +73,15 @@ class MiaoSha:
         now = datetime.datetime.now()
         print('login success:', now.strftime('%Y-%m-%d %H:%M:%S'))
 
-    # def __init__(self, browser):
-    #     browser = webdriver.Chrome("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe")
 
 if __name__ == "__main__":
-        times = input("请输入抢购时间，格式如(2018-09-06 11:26:00.000000):")
-        # 时间格式："2019-01-24 12:17:00.000000"
-        browser = webdriver.Chrome("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe")
-        print('start chrome done')
-        browser.maximize_window()
-        print('maximize chrome done,gonna login')
-        MiaoSha().login(browser)
-        # choose = int(input("到时间自动勾选购物车请输入“1”，否则输入“2”："))
-        choose = 1
-        MiaoSha().buy(times, choose, browser)
+    times = input("请输入抢购时间，格式如(2018-09-06 11:26:00.000000):")
+    # 时间格式："2019-01-24 12:17:00.000000"
+    browser = webdriver.Chrome("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe")
+    print('start chrome done')
+    browser.maximize_window()
+    print('maximize chrome done,gonna login')
+    MiaoSha().login(browser)
+    # choose = int(input("到时间自动勾选购物车请输入“1”，否则输入“2”："))
+    choose = 1
+    MiaoSha().buy(times, choose, browser)
